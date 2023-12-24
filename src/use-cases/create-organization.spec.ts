@@ -42,4 +42,26 @@ describe('Create Organization Use Case', () => {
 
     expect(isPasswordCorrectlyHashed).toBe(true)
   })
+
+  it('should not be able to create organization with same email twice', async () => {
+    await sut.execute({
+      name: 'John Doe',
+      email: 'johndoe@example.com',
+      cep: '00000000',
+      address: 'address test',
+      phone: '00000000000',
+      password: '123456',
+    })
+
+    await expect(() =>
+      sut.execute({
+        name: 'John Doe 2',
+        email: 'johndoe@example.com',
+        cep: '00000000',
+        address: 'address test',
+        phone: '00000000000',
+        password: '123456',
+      }),
+    ).rejects.toBeInstanceOf(Error)
+  })
 })

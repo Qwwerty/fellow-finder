@@ -7,6 +7,8 @@ Fellow Finder
 - [ ] Deve ser possível cadastrar um pet.
 - [ ] Deve ser possível listar todos os pets disponíveis para adoção em uma a cidade.
 - [ ] Deve ser possível filtrar pets por suas características.
+- [ ] Deve ser possível visualizar detalhes de um pet para adoção.
+- [x] Deve ser possível se cadastrar como uma ORG.
 - [ ] Deve ser possível realizar login como uma ORG.
 
 ## Rns (Regras de negócios)

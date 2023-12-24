@@ -47,7 +47,7 @@ model Organization {
   email         String   @unique
   cep           String
   address       String
-  phone         String   @unique @db.Char(11)
+  phone         String   @db.Char(11)
   password_hash String
   created_at    DateTime @default(now())
   Pet           Pet[]
