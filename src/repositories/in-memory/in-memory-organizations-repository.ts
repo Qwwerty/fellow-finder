@@ -1,8 +1,10 @@
 import crypto from 'node:crypto'
 import { Organization, Prisma } from '@prisma/client'
-import { OrganizationRepository } from '../organization-repository'
+import { OrganizationsRepository } from '../organizations-repository'
 
-export class InMemoryOrganizationsRepository implements OrganizationRepository {
+export class InMemoryOrganizationsRepository
+  implements OrganizationsRepository
+{
   items: Organization[] = []
 
   async findByEmail(email: string) {

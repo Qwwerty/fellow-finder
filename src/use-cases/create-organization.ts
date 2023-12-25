@@ -1,4 +1,4 @@
-import { OrganizationRepository } from '@/repositories/organization-repository'
+import { OrganizationsRepository } from '@/repositories/organizations-repository'
 import { Organization } from '@prisma/client'
 import { hash } from 'bcryptjs'
 import { OrganizationAlreadyExistsError } from './errors/organization-already-exists-error'
@@ -17,7 +17,7 @@ interface CreateOrganizationUseCaseResponse {
 }
 
 export class CreateOrganizationUseCase {
-  constructor(private organizationsRepository: OrganizationRepository) {}
+  constructor(private organizationsRepository: OrganizationsRepository) {}
 
   async execute({
     name,
