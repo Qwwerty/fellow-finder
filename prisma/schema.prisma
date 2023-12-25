@@ -42,15 +42,20 @@ enum Space {
 }
 
 model Organization {
-  id            String   @id @default(uuid())
-  name          String
-  email         String   @unique
-  cep           String
-  address       String
-  phone         String   @db.Char(11)
-  password_hash String
-  created_at    DateTime @default(now())
-  Pet           Pet[]
+  id                 String   @id @default(uuid())
+  name               String
+  email              String   @unique
+  cep                String
+  uf                 String   @db.Char(2)
+  city               String
+  street             String
+  district           String
+  number             Int?
+  additional_address String?
+  phone              String   @db.Char(11)
+  password_hash      String
+  created_at         DateTime @default(now())
+  Pet                Pet[]
 
   @@map("organizations")
 }
