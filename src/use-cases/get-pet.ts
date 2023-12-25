@@ -18,7 +18,7 @@ export class GetPetUseCase {
   }: GetPetUseCaseRequest): Promise<GetPetUseCaseResponse> {
     const pet = await this.petsRepository.findById(petId)
 
-    if (!pet) {
+    if (!pet || pet.is_adopted) {
       throw new ResourceNotFoundError()
     }
 

@@ -31,6 +31,25 @@ describe('Get Pet Use Case', () => {
     expect(pet.id).toEqual('pet_fake_id')
   })
 
+  it('should not be able to get pet already adopted', async () => {
+    petsRepository.items.push({
+      id: 'pet_fake_id',
+      name: 'Alfredo',
+      about: 'about test',
+      age: 'OLD',
+      size: 'MEDIUM',
+      energy: 'HIGH',
+      independence: 'LOW',
+      space: 'MEDIUM',
+      organization_id: 'fake_organization_id',
+      is_adopted: true,
+    })
+
+    await expect(() =>
+      sut.execute({ petId: 'pet_fake_id' }),
+    ).rejects.toBeInstanceOf(ResourceNotFoundError)
+  })
+
   it('should not be able to get pet with wrong id', async () => {
     await expect(() =>
       sut.execute({ petId: 'pet_fake_id' }),
