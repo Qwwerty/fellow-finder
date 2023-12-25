@@ -7,6 +7,12 @@ interface CreateOrganizationUseCaseRequest {
   name: string
   email: string
   cep: string
+  uf: string
+  city: string
+  street: string
+  district: string
+  number?: number | null
+  additionalAddress?: string | null
   address: string
   phone: string
   password: string
@@ -23,7 +29,12 @@ export class CreateOrganizationUseCase {
     name,
     email,
     cep,
-    address,
+    uf,
+    city,
+    street,
+    number,
+    district,
+    additionalAddress,
     phone,
     password,
   }: CreateOrganizationUseCaseRequest): Promise<CreateOrganizationUseCaseResponse> {
@@ -40,7 +51,12 @@ export class CreateOrganizationUseCase {
       name,
       email,
       cep,
-      address,
+      uf,
+      city,
+      street,
+      number,
+      district,
+      additional_address: additionalAddress ?? '',
       phone,
       password_hash,
     })
