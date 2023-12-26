@@ -13,7 +13,6 @@ interface CreateOrganizationUseCaseRequest {
   district: string
   number?: number | null
   additionalAddress?: string | null
-  address: string
   phone: string
   password: string
 }
