@@ -9,7 +9,7 @@ Fellow Finder
 - [x] Deve ser possível filtrar pets por suas características.
 - [x] Deve ser possível visualizar detalhes de um pet para adoção.
 - [x] Deve ser possível se cadastrar como uma ORG.
-- [ ] Deve ser possível realizar login como uma ORG.
+- [x] Deve ser possível realizar login como uma ORG.
 
 ## Rns (Regras de negócios)
 
@@ -18,4 +18,4 @@ Fellow Finder
 - [x] Um pet deve estar ligado a uma ORG.
 - [x] O usuário que quer adotar, entrará em contato com a ORG via WhatsApp.
 - [x] Todos os filtros, além da cidade, são opcionais.
-- [ ] Para uma ORG acessar a aplicação como admin, ela precisa estar logada.
+- [x] Para uma ORG acessar a aplicação como admin, ela precisa estar logada.
