@@ -13,7 +13,7 @@ describe('Create Pet (e2e)', () => {
     await app.close()
   })
 
-  it('should be able to create a pet', async () => {
+  it('should be able to get a pet', async () => {
     const { token, organizationId } =
       await createAndAuthenticateOrganization(app)
 
@@ -31,7 +31,7 @@ describe('Create Pet (e2e)', () => {
     })
 
     const petResponse = await request(app.server)
-      .get(`/pets/${pet.id}`)
+      .get(`/pet/${pet.id}`)
       .set('Authorization', `Bearer ${token}`)
       .expect(200)
 
