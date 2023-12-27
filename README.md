@@ -1,22 +1,76 @@
-## App
+<h1 align="center">
 
-Fellow Finder
+Fellow Finder Api :dog:
 
-## RFs (Requisitos funcionais)
+</h1>
 
-- [x] Deve ser possível cadastrar um pet.
-- [x] Deve ser possível listar todos os pets disponíveis para adoção em uma a cidade.
-- [x] Deve ser possível filtrar pets por suas características.
-- [x] Deve ser possível visualizar detalhes de um pet para adoção.
-- [x] Deve ser possível se cadastrar como uma ORG.
-- [x] Deve ser possível realizar login como uma ORG.
+<p align="center">
+  Fellow Finder - Find a friend
+  <br>
+  <br>
 
-## Rns (Regras de negócios)
+  <a href="www.linkedin.com/in/rhalfoliveira">
+    <img alt="Made by Rhalf Oliveira" src="https://img.shields.io/badge/made%20by-Rhalf%20Oliveira-%237519C1">
+  </a>
+  <a href="https://github.com/qwwerty/happy-api/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/qwwerty/fellow-finder">
+  </a>
 
-- [x] Para listar os pets, obrigatoriamente precisamos informar a cidade.
-- [x] Uma ORG precisa ter um endereço e um número de WhatsApp.
-- [x] Um pet deve estar ligado a uma ORG.
-- [x] O usuário que quer adotar, entrará em contato com a ORG via WhatsApp.
-- [x] Todos os filtros, além da cidade, são opcionais.
-- [x] Para uma ORG acessar a aplicação como admin, ela precisa estar logada.
-- [x] Para criar um pet, a ORG precisa estar logada.
+</p>
+
+## Functional Requirements
+
+- [x] It must be possible to register a pet.
+- [x] It should be possible to list all the pets available for adoption in a city.
+- [x] It should be possible to filter pets by their characteristics.
+- [x] It should be possible to view details of a pet for adoption.
+- [x] It must be possible to register as an OB.
+- [x] It must be possible to log in as an OBS.
+
+## Business Rules
+
+- [x] To list the pets, we must inform the city.
+- [x] An OBS must have a WhatsApp address and number.
+- [x] A pet must be connected to an OBS.
+- [x] The user who wants to adopt will contact the ORG via WhatsApp.
+- [x] All filters, other than city, are optional.
+- [x] For an OBS to access the application as an admin, it must be logged in.
+- [x] To create a pet, the org must be logged in.
+
+## :white_check_mark: Requirements
+
+- [Node](https://nodejs.org/en/)
+- [Npm](https://www.npmjs.com/)
+- [Yarn](https://yarnpkg.com/lang/en/)
+
+## :checkered_flag: Starting
+
+```bash
+# Clone this project
+$ git clone https://github.com/qwwerty/fellow-finder
+
+# Access
+$ cd fellow-finder
+
+# Install dependencies
+$ npm install
+
+# Rename the .env.example file to .env and configure environment variables
+
+# Run the container docker
+$ docker compose up -d
+
+# Run prisma migrates
+$ npx prisma migrate dev
+
+# Run the project
+$ npm run dev
+
+# Run unit tests
+$ npm run test
+
+# Run e2e tests
+$ npm run test:e2e
+
+# The server will initialize in the <http://localhost:3333>
+```
