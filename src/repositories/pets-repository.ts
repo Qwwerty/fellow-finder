@@ -3,11 +3,11 @@ import { Pet, Prisma } from '@prisma/client'
 export interface SearchManyProps {
   uf: string
   city: string
-  age?: 'PUPPY' | 'YOUNG' | 'ADULT' | 'OLD'
-  size?: 'SMALL' | 'MEDIUM' | 'BIG'
-  energy?: 'LOW' | 'MEDIUM' | 'HIGH'
-  independence?: 'LOW' | 'MEDIUM' | 'HIGH'
-  space?: 'SMALL' | 'MEDIUM' | 'BIG'
+  age?: 'PUPPY' | 'YOUNG' | 'ADULT' | 'OLD' | null
+  size?: 'SMALL' | 'MEDIUM' | 'BIG' | null
+  energy?: 'LOW' | 'MEDIUM' | 'HIGH' | null
+  independence?: 'LOW' | 'MEDIUM' | 'HIGH' | null
+  space?: 'SMALL' | 'MEDIUM' | 'BIG' | null
 }
 
 export interface PetsRepository {

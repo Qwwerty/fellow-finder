@@ -4,11 +4,11 @@ import { PetsRepository } from '@/repositories/pets-repository'
 interface CreateSearchPetUseCaseRequest {
   uf: string
   city: string
-  age?: 'PUPPY' | 'YOUNG' | 'ADULT' | 'OLD'
-  size?: 'SMALL' | 'MEDIUM' | 'BIG'
-  energy?: 'LOW' | 'MEDIUM' | 'HIGH'
-  independence?: 'LOW' | 'MEDIUM' | 'HIGH'
-  space?: 'SMALL' | 'MEDIUM' | 'BIG'
+  age?: 'PUPPY' | 'YOUNG' | 'ADULT' | 'OLD' | null
+  size?: 'SMALL' | 'MEDIUM' | 'BIG' | null
+  energy?: 'LOW' | 'MEDIUM' | 'HIGH' | null
+  independence?: 'LOW' | 'MEDIUM' | 'HIGH' | null
+  space?: 'SMALL' | 'MEDIUM' | 'BIG' | null
 }
 
 interface CreateSearchPetsUseCaseResponse {
@@ -27,6 +27,7 @@ export class SearchPetsUseCase {
     independence,
     space,
   }: CreateSearchPetUseCaseRequest): Promise<CreateSearchPetsUseCaseResponse> {
+    console.log('SearchPetsUseCase')
     const pets = await this.petsRepository.searchMany({
       uf,
       city,
